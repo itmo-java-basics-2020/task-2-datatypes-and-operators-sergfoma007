@@ -63,7 +63,7 @@ public class Task2 {
      */
     int sumOfDigits(int n) {
         int a1 = n % 10;
-        int b1 = (n / 100) % 10;
+        int b1 = (n / 10) % 10;
         int c1 = n / 100;
         int n1 = a1 + b1 + c1;
         return n1; //your code here
