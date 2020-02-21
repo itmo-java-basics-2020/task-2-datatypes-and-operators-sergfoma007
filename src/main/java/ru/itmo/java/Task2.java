@@ -29,7 +29,6 @@ public class Task2 {
     boolean testIfIntsEqual(Integer a, Integer b) {
         boolean c = false;
         if (a == b) c = true;
-        //if (a
         return c; //your code here
     }
 
@@ -44,10 +43,9 @@ public class Task2 {
      */
     boolean numberInRange(Integer number, Integer leftBound, Integer rightBound, Boolean inclusively) {
         boolean otvet = false;
-        if (inclusively) {
+        if (inclusively == true) {
             if ((number >= leftBound) && (number <= rightBound)) otvet = true;
-        }
-        else {
+        } else {
             if ((number > leftBound) && (number < rightBound)) otvet = true;
         }
         return otvet; //your code here
@@ -108,14 +106,15 @@ public class Task2 {
      */
     int xorDigits(int N)
     {
-        //Integer A1 = N % 100;
+        Integer A1 = (N % 100) / 10;
+        Integer A2 = N % 10;
 
-        //Integer N1 = N ^ A1;
-        //return N1; //your code here
-        Integer A1 = N % 10;
-        Integer A2 = (N / 100) % 10;
-        Integer N1 = N ^ A1 ^ A2;
-        return N1;
+        Integer N1 = A1 ^ A2;
+        return N1; //your code here
+        //Integer A1 = N % 10;
+        //Integer A2 = (N % 100) / 10;
+        //Integer N1 = N ^ A1 ^ A2;
+        //return N1;
     }
 
 }
