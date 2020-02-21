@@ -19,7 +19,7 @@ public class Task2 {
      * Дан символ, верните его код. Не используйте явное приведение типов и любые библиотечные функции
      */
     int charCode(char c) {
-        Integer b = c + 0;
+        int b = c + 0;
         return b; //your code here
     }
 
@@ -29,6 +29,7 @@ public class Task2 {
     boolean testIfIntsEqual(Integer a, Integer b) {
         boolean c = false;
         if (a == b) c = true;
+
         return c; //your code here
     }
 
@@ -86,7 +87,7 @@ public class Task2 {
      */
     int nextEvenNumber(int n)
     {
-        Integer ch = ((n + 2) / 2) * 2;
+        int ch = ((n + 2) / 2) * 2;
         return ch; //your code here
     }
 
@@ -97,7 +98,7 @@ public class Task2 {
      * своем кабинете
      */
     int schoolDesks(int num1, int num2, int num3) {
-        Integer otvet = (num1 + 1) / 2 + (num2 + 1) / 2 + (num3 + 1) / 2;
+        int otvet = (num1 + 1) / 2 + (num2 + 1) / 2 + (num3 + 1) / 2;
         return otvet; //your code here
     }
 
@@ -106,14 +107,14 @@ public class Task2 {
      */
     int xorDigits(int N)
     {
-        Integer A1 = (N % 100) / 10;
-        Integer A2 = N % 10;
+        int A1 = (N % 100) / 10;
+        int A2 = N % 10;
 
-        Integer N1 = A1 ^ A2;
+        int N1 = A1 ^ A2;
         return N1; //your code here
-        //Integer A1 = N % 10;
-        //Integer A2 = (N % 100) / 10;
-        //Integer N1 = N ^ A1 ^ A2;
+        //int A1 = N % 10;
+        //int A2 = (N % 100) / 10;
+        //int N1 = N ^ A1 ^ A2;
         //return N1;
     }
 
