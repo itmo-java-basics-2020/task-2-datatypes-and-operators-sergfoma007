@@ -11,21 +11,24 @@ public class Task2 {
      * - вывод 0.9
      */
     double getFractionalPart(double realNumber) {
-        return 0.0; //your code here
+        realNumber = realNumber % 1;
+        return realNumber; //your code here
     }
 
     /**
      * Дан символ, верните его код. Не используйте явное приведение типов и любые библиотечные функции
      */
     int charCode(char c) {
-        return 0; //your code here
+        Integer b = c + 0;
+        return b; //your code here
     }
 
     /**
      * Даны 2 целых числа. Проверьте равны ли они
      */
     boolean testIfIntsEqual(Integer a, Integer b) {
-        return false; //your code here
+        //if (a
+        return a == b; //your code here
     }
 
     /**
@@ -59,7 +62,11 @@ public class Task2 {
      * Дано трехзначное число 100 <= N <= 999. Найдите сумму его чисел.
      */
     int sumOfDigits(int n) {
-        return 0; //your code here
+        int a1 = n % 10;
+        int b1 = (n / 100) % 10;
+        int c1 = n / 100;
+        int n1 = a1 + b1 + c1;
+        return n1; //your code here
     }
 
     /**
