@@ -27,8 +27,10 @@ public class Task2 {
      * Даны 2 целых числа. Проверьте равны ли они
      */
     boolean testIfIntsEqual(Integer a, Integer b) {
+        boolean c = false;
+        if (a == b) c = true;
         //if (a
-        return a == b; //your code here
+        return c; //your code here
     }
 
     /**
@@ -41,21 +43,33 @@ public class Task2 {
      * @param inclusively входят ли границы в заданный даипазон
      */
     boolean numberInRange(Integer number, Integer leftBound, Integer rightBound, Boolean inclusively) {
-        return false; //your code here
+        boolean otvet = false;
+        if (inclusively) {
+            if ((number >= leftBound) && (number <= rightBound)) otvet = true;
+        }
+        else {
+            if ((number > leftBound) && (number < rightBound)) otvet = true;
+        }
+        return otvet; //your code here
     }
 
     /**
      * Даны 3 символа. Определите является ли хотя бы один из них цифрой 1..9
      */
     boolean atLeastOneIsDigit(char c1, char c2, char c3) {
-        return false; //your code here
+        boolean otvet = (Character.isDigit (c1)) || (Character.isDigit (c2)) || (Character.isDigit (c3));
+        return otvet; //your code here
     }
 
     /**
      * Даны два вещественных числа. Определите равны ли они
      */
-    boolean areRealNumbersEqual(double a, double b) {
-        return false; //your code here
+    boolean areRealNumbersEqual(double a, double b)
+    {
+        double EPS = 0.00001;
+        if (Math.abs(a - b) < EPS) return true;
+        else return false;
+        //return false; //your code here
     }
 
     /**
@@ -72,8 +86,10 @@ public class Task2 {
     /**
      * Дано натуральное число N <= 10000. Выведите следующее после N четное число. Например: N = 8, Result = 10
      */
-    int nextEvenNumber(int n) {
-        return 0; //your code here
+    int nextEvenNumber(int n)
+    {
+        Integer ch = ((n + 2) / 2) * 2;
+        return ch; //your code here
     }
 
     /**
@@ -83,14 +99,23 @@ public class Task2 {
      * своем кабинете
      */
     int schoolDesks(int num1, int num2, int num3) {
-        return 0; //your code here
+        Integer otvet = (num1 + 1) / 2 + (num2 + 1) / 2 + (num3 + 1) / 2;
+        return otvet; //your code here
     }
 
     /**
      * Дано натуральное число N >= 10. Выведите результат применения XOR к последним 2-м цифрам числа N
      */
-    int xorDigits(int N) {
-        return 0; //your code here
+    int xorDigits(int N)
+    {
+        //Integer A1 = N % 100;
+
+        //Integer N1 = N ^ A1;
+        //return N1; //your code here
+        Integer A1 = N % 10;
+        Integer A2 = (N / 100) % 10;
+        Integer N1 = N ^ A1 ^ A2;
+        return N1;
     }
 
 }
