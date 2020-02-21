@@ -27,10 +27,11 @@ public class Task2 {
      * Даны 2 целых числа. Проверьте равны ли они
      */
     boolean testIfIntsEqual(Integer a, Integer b) {
-        boolean c = false;
-        if (a == b) c = true;
+        //boolean c = false;
+        //if (a == b) c = true;
 
-        return c; //your code here
+        //return c; //your code here
+        return a.equals(b);
     }
 
     /**
@@ -43,6 +44,7 @@ public class Task2 {
      * @param inclusively входят ли границы в заданный даипазон
      */
     boolean numberInRange(Integer number, Integer leftBound, Integer rightBound, Boolean inclusively) {
+        if ((number == null) || (leftBound == null) || (rightBound == null) || (inclusively == null)) return false;
         boolean otvet = false;
         if (inclusively == true) {
             if ((number >= leftBound) && (number <= rightBound)) otvet = true;
