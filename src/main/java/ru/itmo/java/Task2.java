@@ -1,5 +1,7 @@
 package ru.itmo.java;
 
+import java.math.BigInteger;
+
 @SuppressWarnings("all")
 public class Task2 {
 
@@ -52,6 +54,7 @@ public class Task2 {
             if ((number > leftBound) && (number < rightBound)) otvet = true;
         }
         return otvet; //your code here
+
     }
 
     /**
